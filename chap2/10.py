@@ -1,9 +1,9 @@
 # 10. 行数のカウント
 # 行数をカウントせよ．確認にはwcコマンドを用いよ．
 
-path = "./popular-names.txt"
+path_input = "./popular-names.txt"
 
-with open(path) as f:
+with open(path_input) as f:
     print(len(list(f)))
 
 # $ wc -l popular-names.txt 
