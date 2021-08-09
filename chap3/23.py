@@ -38,7 +38,7 @@ data_str = data["text"]
 # セクション行を抽出する
 pattern_str = r"^(=+)(.+?)(=+)"
 for m in re.finditer(pattern_str, data_str,re.MULTILINE):
-    # [[Category:イギリス|*]] の形式
+    # グループ化されているもののうち、最初の「==」の部分とセクション名を抽出
     str_equals, str_name, _ = m.groups()
     print("セクション名: ", str_name)
     print("レベル: ", str_equals.count('='))
